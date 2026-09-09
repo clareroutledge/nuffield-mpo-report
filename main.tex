@@ -1,0 +1,60 @@
+% =============================================================
+% Main Public Output (MPO) — Nuffield Foundation grant FR000027016
+% "Reducing attrition of more experienced teachers from the workforce"
+%
+% Structure follows Nuffield Guide for Grant-Holders §4.6 (25–50pp
+% excl. appendices; standalone exec summary ≤3,000 words; methods
+% kept brief in-body with full technical detail in the companion
+% appendices document) and the accessible/technical split used in
+% Allen et al. (2025) and NFER's Nuffield-hosted reports.
+%
+% Swap the `report` class / preamble below for Ambition Institute's
+% house template once Kirstie Ebbs confirms one exists — this is a
+% clean generic skeleton so drafting can start immediately.
+% =============================================================
+\documentclass[11pt,a4paper]{report}
+
+\usepackage[margin=2.5cm]{geometry}
+\usepackage[british]{babel}
+\usepackage{fontspec}         % remove + switch to [utf8]{inputenc} if not using xelatex/lualatex
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage[authoryear,round]{natbib}
+% Using natbib + bibtex rather than biblatex/biber: no biber dependency,
+% compiles the same way on Overleaf and on a plain TeX Live install.
+
+\hypersetup{colorlinks=true, linkcolor=black, urlcolor=blue, citecolor=black}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small Reducing attrition of more experienced teachers}
+\fancyhead[R]{\small \thepage}
+
+\title{Reducing attrition of more experienced teachers from the workforce}
+\author{Sam Sims and Clare Routledge}
+\date{DRAFT --- \today}
+
+\begin{document}
+
+\input{sections/00_frontmatter}
+
+\tableofcontents
+\clearpage
+
+\input{sections/01_exec_summary}
+\input{sections/02_introduction}
+\input{sections/03_methods}
+\input{sections/04_results}
+\input{sections/05_cost_and_implementation}
+\input{sections/06_conclusion}
+
+\clearpage
+\addcontentsline{toc}{chapter}{References}
+\bibliographystyle{apalike}
+\bibliography{references}
+
+\end{document}

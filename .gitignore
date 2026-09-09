@@ -1,0 +1,26 @@
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.toc
+*.bbl
+*.bcf
+*.blg
+*.run.xml
+*.synctex.gz
+*.fdb_latexmk
+*.fls
+*.lof
+*.lot
+*.nav
+*.snm
+*.vrb
+*.xdv
+
+# Overleaf / editor
+*.gz
+.DS_Store
+
+# Build output (keep the source, not the compiled PDF, under version control —
+# Overleaf compiles on its own; commit a PDF only for tagged milestone releases)
+main.pdf
