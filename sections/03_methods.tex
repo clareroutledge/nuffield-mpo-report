@@ -1,45 +1,89 @@
 \chapter{Methods}
 
-% NUFFIELD REQUIREMENT: "a brief account of the project's methodology
-% (details can be covered in an appendix)." Aim for ~2-3pp here, plain
-% English, no equations/model specification — that all goes in the
-% technical appendices document (power calcs, AMCE model, robustness
-% checks, cognitive interview protocol).
-
 \section{Study design}
 
-% What a job choice / paired conjoint experiment is, in plain terms —
-% see the "How to read the experiment results" framing used in
-% Allen et al. (2025) as a model for accessible explanation.
+We use a job choice survey experiment. Participants are repeatedly shown two hypothetical jobs,
+side by side, and asked which they would prefer. Each job is described by a set of attributes ---
+things like salary, working hours, and whether time off for appointments is easily accommodated
+--- and the level of each attribute (e.g.\ ``40--44 hours per week'' vs.\ ``50--54 hours per
+week'') is assigned at random each time a job is shown. Because the levels are randomly assigned,
+we can isolate the causal effect of each individual attribute on whether a job is chosen, in the
+same way a randomised trial isolates the effect of a treatment.
 
-\section{Who took part}
+Neither job is labelled as a teaching job or a non-teaching job. Instead, attribute levels are
+written in language that applies equally to teaching and other graduate occupations (for example,
+``support staff to reduce workload'' rather than ``teaching assistant availability''). This lets
+us model the decision to stay in or leave the profession, rather than only the decision to move
+between schools.
 
-% Teacher Tapp, sample size, how representativeness was handled —
-% one paragraph, not the full participant-flow table (that's an
-% appendix table).
+We ask participants to imagine that two jobs are identical on everything except the attributes
+shown, and simply state which they would prefer. This is a more demanding task than asking people
+to rate arrangements on a scale, but it is also more informative: because salary is one of the
+attributes tested, we can express how much of each other attribute is ``worth'' in salary terms
+--- what we call its \emph{salary-equivalent value} throughout this report.
 
-\section{What we asked}
+\section{What we asked about}
 
-% The attribute set, in plain language — a simple table works well
-% here (see \texttt{table:attributes} below); full attribute-level
-% wording and levels can stay in the appendix.
+Table~\ref{table:attributes} sets out the family-friendly attributes we tested, alongside the
+levels of each. Attributes were chosen to reflect arrangements that are common, or becoming more
+common, in schools in England, which makes our findings directly actionable for schools looking
+to expand flexible working. The exact wording was refined through cognitive interviews with
+serving teachers and a pilot survey ahead of fieldwork, to check that each attribute was
+understood as intended.
 
 \begin{table}[htbp]
   \centering
-  \caption{Job attributes tested}
+  \caption{Family-friendly job attributes tested}
   \label{table:attributes}
-  \begin{tabular}{ll}
+  \begin{tabular}{p{4cm}p{9.5cm}}
     \toprule
-    Attribute & Example levels tested \\
+    Attribute & Levels tested (low to high) \\
     \midrule
-    Salary & 10\% lower / same / 10\% higher \\
-    \dots & \dots \\
+    Hours actually worked & 50--54 / 45--49 / 40--44 hours per week \\
+    Working from home & None / half-day PPA from home / 2 days per week \\
+    Part-time / job share & Discouraged / considered case-by-case / actively supported \\
+    Compressed working week & Standard 5-day week / 9-day fortnight / 4-day week \\
+    Time off for appointments & Discouraged / accommodated with advance planning / flexibly supported \\
+    Work outside contracted hours & Regular evenings/weekends / occasional / rare \\
+    Support staff for workload & None / some, for specific tasks / dedicated support regularly available \\
+    Paid maternity leave & 66\% pay, 18 weeks / 100\%, 18 weeks / 100\%, 24 weeks \\
+    Paid paternity leave & 90\%, 2 weeks / 100\%, 18 weeks / 100\%, 24 weeks \\
+    Work--home fatigue spillover & Often interferes / sometimes interferes / rarely interferes \\
+    Salary & 10\% lower / same / 10\% higher than current \\
     \bottomrule
   \end{tabular}
 \end{table}
 
+Because eleven attributes are too many to show at once without overwhelming respondents,
+particularly on a mobile phone screen, each participant sees a subset in any one choice task
+(a ``partial profile'' design). Salary appears in every task, which is what allows us to express
+every other attribute in comparable salary-equivalent terms. Full detail on how attributes were
+allocated across survey ``decks,'' and the robustness checks this requires, is reported in the
+technical appendix.
+
+\section{Who took part}
+
+We administered the survey via Teacher Tapp, a daily panel survey completed by teachers across
+England on their phones. We expect a sample of around 7,700 teachers, which gives us high
+statistical power to detect the size of effect typically found in similar studies, and enough
+teachers in their 30s specifically to support the subgroup comparisons at the heart of RQ3. Full
+power calculations and a discussion of how representative the Teacher Tapp panel is of the wider
+teacher workforce are set out in the technical appendix.
+
 \section{How we analysed the data}
 
-% One short paragraph: AMCEs and marginal means, in plain terms.
-% Signpost: "Full model specification, robustness checks and power
-% calculations are reported in the accompanying technical appendices."
+For each attribute, we estimate how much including a given level changes the probability that a
+job is chosen, holding everything else constant --- what is known as the average marginal
+component effect, or AMCE. We report these alongside marginal means, which show how appealing
+each attribute level is on its own terms, without reference to a baseline category. Expressing
+every attribute's AMCE relative to the AMCE of a 10\% salary increase gives us the
+salary-equivalent value used throughout the findings. For RQ3, we compare these preferences
+across subgroups (age, gender, parenting responsibilities, and stated intention to quit) using
+conditional marginal means, following \citet{leeper2020measuring}. Full model specification and
+robustness checks (deck order effects, profile order effects, and an attribute-composition test)
+are reported in the technical appendix.
+
+% NOTE (quick-and-dirty draft, [date]): citation keys (leeper2020measuring) need
+% matching entries in references.bib. This section describes the design as planned
+% in the submitted bid — update once piloting/cognitive interviews (Aug-Sep) have
+% finalised exact attribute wording, and once actual achieved sample size is known.
